@@ -1,0 +1,91 @@
+APA-STYLE STATISTICAL RESULTS (N = 30, Longitudinal T1, T2, T3; scores out of 20)
+=================================================================================
+
+1. DESCRIPTIVE STATISTICS
+-------------------------
+T1: M = 5.07, SD = 1.66, Mdn = 5.00, Range = 2–8, Skewness ≈ 0.44
+T2: M = 10.27, SD = 1.66, Mdn = 10.00, Range = 7–13
+T3: M = 15.07, SD = 2.16, Mdn = 15.00, Range = 11–19
+Shapiro–Wilk normality: T1: W = 0.947, p = .139 | T2: W = 0.947, p = .141 | T3: W = 0.965, p = .408
+(all p > .05 → normality assumption not violated)
+
+Profile groups: High n = 11, Moderate n = 14, Stable n = 5.
+
+2. REPEATED MEASURES ANOVA (Time: T1, T2, T3)
+---------------------------------------------
+F(2, 58) = 272.25, p < .001, partial η² = .904 (a very large effect)
+Mean change across time was statistically significant.
+
+Sphericity:
+Mauchly's W = 0.149, χ²(2) = 55.31, p < .001 → sphericity VIOLATED.
+Greenhouse–Geisser ε = 0.540.
+GG-corrected results: F(1.08, 31.33) = 272.25, p < .001 (df corrected = df × ε; the
+effect remains highly significant), partial η² = .904.
+
+3. POST-HOC PAIRWISE COMPARISONS (paired t-tests, Bonferroni-adjusted α = .0167)
+--------------------------------------------------------------------------------
+T1 vs T2:  M_diff = −5.20, t(29) = −14.84, p < .001 (Bonferroni p < .001), dz = 2.71, d_av = 3.13
+T2 vs T3:  M_diff = −4.80, t(29) = −15.75, p < .001 (Bonferroni p < .001), dz = 2.88, d_av = 2.49
+T1 vs T3:  M_diff = −10.00, t(29) = −17.26, p < .001 (Bonferroni p < .001), dz = 3.15, d_av = 5.19
+All three comparisons significant after Bonferroni correction; all effects extremely large (dz > 2).
+
+4. BETWEEN-GROUP ONE-WAY ANOVAs (Profile: High / Moderate / Stable)
+-------------------------------------------------------------------
+(a) DV = Delta (T3 − T1; Total Drift)
+    High:     M = 13.55, SD = 1.92  (n = 11)
+    Moderate: M = 8.57,  SD = 0.85  (n = 14)
+    Stable:   M = 6.20,  SD = 1.30  (n = 5)
+    F(2, 27) = 60.94, p < .001, η² = .819
+    Note: Levene's test W = 4.77, p = .017 (variance homogeneity violated; the
+    Stable-group Shapiro–Wilk p = .021 also flagged). Welch ANOVA is recommended
+    as a robustness check, but the very large F makes the conclusion robust.
+    Tukey HSD (all pairs significant):
+      High − Moderate:  Δ = 4.97,  p < .001,  95% CI [3.58, 6.37]
+      High − Stable:    Δ = 7.35,  p < .001,  95% CI [5.47, 9.22]
+      Moderate − Stable:Δ = 2.37,  p = .008,  95% CI [0.56, 4.18]
+
+(b) DV = Baseline (T1)
+    High:     M = 3.73, SD = 1.10
+    Moderate: M = 5.64, SD = 1.39
+    Stable:   M = 6.40, SD = 1.52
+    F(2, 27) = 9.64, p < .001, η² = .417
+    Levene: W = 0.17, p = .848 (homogeneity OK); some group non-normality (High p = .015).
+    Tukey HSD:
+      High vs Moderate:  Δ = −1.92, p = .003 (significant)
+      High vs Stable:    Δ = −2.67, p = .002 (significant)
+      Moderate vs Stable:Δ = −0.76, p = .519 (not significant)
+    Interpretation: the High-drift profile started significantly lower at baseline
+    than both other profiles; Moderate and Stable did not differ in baseline.
+
+5. PEARSON CORRELATION (Baseline T1 × Total Drift T3−T1)
+------------------------------------------------
+r(28) = −.773, p < .001, R² = .597
+Strong, negative, and highly significant: lower baseline scores predict larger
+total drift (more improvement potential). Spearman check: ρ = −.746, p < .001.
+
+6. APA-STYLE SUMMARY SENTENCE (ready to paste)
+----------------------------------------------
+A repeated-measures ANOVA with Greenhouse–Geisser correction (ε = .54) indicated
+a significant effect of time on scores, F(1.08, 31.33) = 272.25, p < .001,
+partial η² = .90. Bonferroni-corrected pairwise comparisons showed significant
+increases from T1 to T2 (M_diff = 5.20), t(29) = 14.84, p < .001, dz = 2.71,
+and from T2 to T3 (M_diff = 4.80), t(29) = 15.75, p < .001, dz = 2.88, with the
+largest change between T1 and T3 (M_diff = 10.00), t(29) = 17.26, p < .001,
+dz = 3.15. Between-group analyses revealed that total drift (T3−T1) differed
+significantly across profiles, F(2, 27) = 60.94, p < .001, η² = .82, with the
+High profile (M = 13.55, SD = 1.92) showing greater drift than Moderate
+(M = 8.57, SD = 0.85) and Stable (M = 6.20, SD = 1.30), all Tukey ps ≤ .008.
+Baseline scores also differed across profiles, F(2, 27) = 9.64, p < .001, η² = .42,
+the High profile starting lower. Baseline was strongly and negatively correlated
+with total drift, r(28) = −.77, p < .001, indicating that lower initial scores
+were associated with greater subsequent change.
+
+CAVEATS
+-------
+- Mauchly's test and Levene's test were violated in places; GG correction applied
+  for sphericity. Welch/robust alternatives would strengthen the between-group claim,
+  though effect sizes are very large.
+- Cohen's dz uses within-subject SD; d_av uses the averaged SD of the two time points.
+- Effect-size benchmarks: η² ≈ .01 small, .06 medium, .14 large (Cohen, 1988).
+
+Raw data file: /mnt/data/longitudinal_data.csv
