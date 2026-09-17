@@ -42,6 +42,6 @@ Our findings demonstrate that prolonged exposure to AI tools acts as a stylistic
 If you utilize this pipeline or dataset, please cite as:
 
 > Merrikhi, P. (2026). Replication Package and Computational Stylometry Pipeline for "The Algorithmic Echo: Longitudinal Stylistic Convergence and Authorial Voice in AI-Mediated L2 Academic Writing" [Data set and software]. Zenodo. https://doi.org/10.5281/zenodo.22819751
-
+Contact: Pegah Merrikhi • Pegah.Merrikhiii@gmail.com
 ---
 *Created by [Pegah Merrikhi](mailto:pegah.merrikhiii@gmail.com)*
